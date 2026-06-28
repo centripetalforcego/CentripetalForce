@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CentripetalForce — ZenGoStudio Portal</title>
-  <meta name="description" content="Official portal for CentripetalForce development studio and ZenGoStudio, the premium Go (Weiqi) app featuring local PvP, WebRTC multiplayer, and KataGo AI.">
+  <title>CentripetalForce — Premium App Development Studio</title>
+  <meta name="description" content="Official portal for CentripetalForce development studio. Creators of premium, offline-first applications focusing on performance, design and user privacy.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -36,171 +36,188 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Main Content -->
   <main id="main-content">
+    
+    <!-- Studio Hero Section -->
     <section class="hero" id="hero-section">
       <div class="container">
         <h2 class="hero-subtitle" id="hero-sub">CentripetalForce Studio</h2>
         <h1 class="hero-title" id="hero-main-title">
-          <span class="lang-es">Descubre el Arte del Go con <span>ZenGoStudio</span></span>
-          <span class="lang-en">Master the Art of Go with <span>ZenGoStudio</span></span>
+          <span class="lang-es">Creamos Experiencias Digitales <span>Premium</span></span>
+          <span class="lang-en">Crafting <span>Premium</span> Digital Experiences</span>
         </h1>
         <p class="hero-description" id="hero-desc">
-          <span class="lang-es">Una plataforma premium y minimalista diseñada para jugar, estudiar y dominar el Weiqi (Go / Baduk). Desde partidas locales y WebRTC P2P hasta el análisis táctico asistido por la IA KataGo.</span>
-          <span class="lang-en">A premium, minimalist platform designed to play, study, and master Weiqi (Go / Baduk). Featuring local PvP, WebRTC P2P multiplayer, and advanced tactical analysis powered by KataGo AI.</span>
+          <span class="lang-es">Desarrollamos aplicaciones y herramientas móviles enfocadas en un rendimiento local excepcional, un diseño visual elegante y la absoluta privacidad del usuario.</span>
+          <span class="lang-en">We develop mobile applications and software tools focused on exceptional native performance, elegant visual design, and absolute user privacy.</span>
         </p>
         <div class="cta-group" id="hero-cta">
-          <a href="docs.html" class="btn btn-primary" id="cta-docs">
-            <span class="lang-es">Ver Guía de Uso</span>
-            <span class="lang-en">View User Manual</span>
-          </a>
-          <a href="privacy.html" class="btn btn-secondary" id="cta-privacy">
-            <span class="lang-es">Política de Privacidad</span>
-            <span class="lang-en">Privacy Policy</span>
+          <a href="#apps-section" class="btn btn-primary" id="cta-explore">
+            <span class="lang-es">Ver Nuestras Aplicaciones</span>
+            <span class="lang-en">Explore Our Applications</span>
           </a>
         </div>
-
-        <!-- Interactive Board Mockup -->
-        <div class="board-mockup-wrapper" id="interactive-goban">
-          <!-- Row 1 -->
-          <div class="board-cell"></div>
-          <div class="board-cell"></div>
-          <div class="board-cell"></div>
-          <div class="board-cell"></div>
-          <div class="board-cell"></div>
-          <div class="board-cell"></div>
-          <div class="board-cell"></div>
-          
-          <!-- Row 2 -->
-          <div class="board-cell"></div>
-          <div class="board-cell"><div class="board-stone black" onclick="toggleStone(this)"></div></div>
-          <div class="board-cell"></div>
-          <div class="board-cell"></div>
-          <div class="board-cell"><div class="board-stone white" onclick="toggleStone(this)"></div></div>
-          <div class="board-cell"></div>
-          <div class="board-cell"></div>
-          
-          <!-- Row 3 -->
-          <div class="board-cell"></div>
-          <div class="board-cell"></div>
-          <div class="board-cell"><div class="board-stone black" onclick="toggleStone(this)"></div></div>
-          <div class="board-cell"></div>
-          <div class="board-cell"></div>
-          <div class="board-cell"></div>
-          <div class="board-cell"></div>
-          
-          <!-- Row 4 (Center Star) -->
-          <div class="board-cell"></div>
-          <div class="board-cell"></div>
-          <div class="board-cell"></div>
-          <div class="board-cell"><div class="board-stone white" onclick="toggleStone(this)"></div></div>
-          <div class="board-cell"></div>
-          <div class="board-cell"></div>
-          <div class="board-cell"></div>
-          
-          <!-- Row 5 -->
-          <div class="board-cell"></div>
-          <div class="board-cell"></div>
-          <div class="board-cell"></div>
-          <div class="board-cell"></div>
-          <div class="board-cell"><div class="board-stone black" onclick="toggleStone(this)"></div></div>
-          <div class="board-cell"></div>
-          <div class="board-cell"></div>
-          
-          <!-- Row 6 -->
-          <div class="board-cell"></div>
-          <div class="board-cell"><div class="board-stone white" onclick="toggleStone(this)"></div></div>
-          <div class="board-cell"></div>
-          <div class="board-cell"></div>
-          <div class="board-cell"><div class="board-stone black" onclick="toggleStone(this)"></div></div>
-          <div class="board-cell"></div>
-          <div class="board-cell"></div>
-          
-          <!-- Row 7 -->
-          <div class="board-cell"></div>
-          <div class="board-cell"></div>
-          <div class="board-cell"></div>
-          <div class="board-cell"></div>
-          <div class="board-cell"></div>
-          <div class="board-cell"></div>
-          <div class="board-cell"></div>
-        </div>
-        <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 12px;">
-          <span class="lang-es">Prueba a hacer clic en las piedras del tablero</span>
-          <span class="lang-en">Try clicking on the stones on the board</span>
-        </p>
       </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features-section" id="features-section">
+    <!-- Applications Showcase Section -->
+    <section class="apps-section" id="apps-section">
       <div class="container">
-        <div class="section-header" id="features-header">
+        
+        <div class="section-header" id="apps-header">
           <h2>
-            <span class="lang-es">Características de ZenGoStudio</span>
-            <span class="lang-en">ZenGoStudio Features</span>
+            <span class="lang-es">Nuestras Aplicaciones</span>
+            <span class="lang-en">Our Applications</span>
           </h2>
           <p>
-            <span class="lang-es">Desarrollado meticulosamente para ofrecer una experiencia táctil inmersiva y un aprendizaje de nivel profesional.</span>
-            <span class="lang-en">Meticulously developed to provide an immersive tactile experience and professional-grade study tools.</span>
+            <span class="lang-es">Proyectos destacados diseñados y publicados bajo la firma de CentripetalForce.</span>
+            <span class="lang-en">Featured projects designed and published under the CentripetalForce banner.</span>
           </p>
         </div>
 
-        <div class="grid" id="features-grid">
-          <!-- Card 1 -->
-          <div class="card" id="card-pvp">
-            <div class="card-icon">⚔️</div>
-            <h3>
-              <span class="lang-es">Partidas Locales (PvP)</span>
-              <span class="lang-en">Local Matches (PvP)</span>
-            </h3>
-            <p>
-              <span class="lang-es">Relojes profesionales de Byo-Yomi y Fischer con control táctil optimizado y escala inmersiva de tablero (100% de pantalla).</span>
-              <span class="lang-en">Professional Byo-Yomi and Fischer clocks with optimized touch controls and an immersive 100% board layout.</span>
+        <!-- Project 1: ZenGoStudio -->
+        <div class="project-card" id="project-zengostudio">
+          
+          <div class="project-header">
+            <div class="project-title">
+              <div class="yin-yang-icon" style="font-size: 1.5rem;">
+                <div class="logo-stone black" style="width: 20px; height: 20px;"></div>
+                <div class="logo-stone white" style="width: 20px; height: 20px;"></div>
+              </div>
+              <span>ZenGoStudio</span>
+            </div>
+            <p class="project-tagline">
+              <span class="lang-es">Estudio y Práctica Inmersiva de Go (Weiqi / Baduk)</span>
+              <span class="lang-en">Immersive Study & Play Companion for Go (Weiqi / Baduk)</span>
             </p>
           </div>
 
-          <!-- Card 2 -->
-          <div class="card" id="card-webrtc">
-            <div class="card-icon">🌐</div>
-            <h3>
-              <span class="lang-es">Multijugador P2P WebRTC</span>
-              <span class="lang-en">P2P WebRTC Multiplayer</span>
-            </h3>
-            <p>
-              <span class="lang-es">Conexiones directas punto a punto seguras y rápidas usando códigos de 4 dígitos. Sin registros ni cuentas obligatorias.</span>
-              <span class="lang-en">Direct, secure, and fast peer-to-peer connections using 4-digit PIN codes. No registration or accounts required.</span>
-            </p>
-          </div>
+          <div class="project-body-grid">
+            
+            <!-- Left Side: Interactive Goban CSS Mockup -->
+            <div class="project-visual" style="display: flex; flex-direction: column; align-items: center;">
+              <div class="board-mockup-wrapper" id="interactive-goban">
+                <!-- Row 1 -->
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                
+                <!-- Row 2 -->
+                <div class="board-cell"></div>
+                <div class="board-cell"><div class="board-stone black" onclick="toggleStone(this)"></div></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"><div class="board-stone white" onclick="toggleStone(this)"></div></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                
+                <!-- Row 3 -->
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"><div class="board-stone black" onclick="toggleStone(this)"></div></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                
+                <!-- Row 4 -->
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"><div class="board-stone white" onclick="toggleStone(this)"></div></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                
+                <!-- Row 5 -->
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"><div class="board-stone black" onclick="toggleStone(this)"></div></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                
+                <!-- Row 6 -->
+                <div class="board-cell"></div>
+                <div class="board-cell"><div class="board-stone white" onclick="toggleStone(this)"></div></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"><div class="board-stone black" onclick="toggleStone(this)"></div></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                
+                <!-- Row 7 -->
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+                <div class="board-cell"></div>
+              </div>
+              <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 12px; text-align: center;">
+                <span class="lang-es">Haz clic en las piedras para jugar</span>
+                <span class="lang-en">Click on the stones to play</span>
+              </p>
+            </div>
 
-          <!-- Card 3 -->
-          <div class="card" id="card-tsumego">
-            <div class="card-icon">🧩</div>
-            <h3>
-              <span class="lang-es">Banco de Tsumegos</span>
-              <span class="lang-en">Tsumego Bank</span>
-            </h3>
-            <p>
-              <span class="lang-es">Colección seleccionada de problemas de vida y muerte. Evalúa soluciones dinámicas e importa tus propios archivos SGF de táctica.</span>
-              <span class="lang-en">Curated collection of life-and-death problems. Tests dynamic branching paths and supports importing custom tactical SGF files.</span>
-            </p>
-          </div>
+            <!-- Right Side: Details & Actions -->
+            <div class="project-info">
+              <p style="color: var(--text-gray); margin-bottom: 24px; font-size: 1.05rem;">
+                <span class="lang-es">ZenGoStudio es una suite avanzada para jugadores y estudiantes de Go. Combina un entorno offline inmersivo con herramientas profesionales para resolver problemas y analizar partidas.</span>
+                <span class="lang-en">ZenGoStudio is an advanced suite for Go players and students. It integrates an offline-first gameplay experience with professional-grade analysis and tactical problem-solving.</span>
+              </p>
 
-          <!-- Card 4 -->
-          <div class="card" id="card-katago">
-            <div class="card-icon">🧠</div>
-            <h3>
-              <span class="lang-es">Análisis KataGo AI</span>
-              <span class="lang-en">KataGo AI Analysis</span>
-            </h3>
-            <p>
-              <span class="lang-es">Integración nativa del motor de IA KataGo para análisis interactivo en tiempo real y asistencia táctica en tus partidas de estudio.</span>
-              <span class="lang-en">Native integration of the KataGo AI engine for real-time interactive game analysis and tactical guidance during study.</span>
-            </p>
+              <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 32px;">
+                <div class="card" style="padding: 16px; min-height: unset;">
+                  <h4 style="color: var(--primary-gold); margin-bottom: 6px; font-size: 0.95rem;">⚔️ <span class="lang-es">Partidas Locales & P2P</span><span class="lang-en">Local & P2P Play</span></h4>
+                  <p style="font-size: 0.85rem; line-height: 1.4;">
+                    <span class="lang-es">Tablero inmersivo sin bordes con relojes Byo-Yomi y multijugador WebRTC directo.</span>
+                    <span class="lang-en">Immersive borderless board with Byo-Yomi clocks and direct WebRTC multiplayer.</span>
+                  </p>
+                </div>
+                <div class="card" style="padding: 16px; min-height: unset;">
+                  <h4 style="color: var(--primary-gold); margin-bottom: 6px; font-size: 0.95rem;">🧠 <span class="lang-es">Puente KataGo AI</span><span class="lang-en">KataGo AI Bridge</span></h4>
+                  <p style="font-size: 0.85rem; line-height: 1.4;">
+                    <span class="lang-es">Análisis táctico local usando redes neuronales para estimación de territorio y jugadas.</span>
+                    <span class="lang-en">Local tactical reviews leveraging neural networks for territory and move estimation.</span>
+                  </p>
+                </div>
+                <div class="card" style="padding: 16px; min-height: unset;">
+                  <h4 style="color: var(--primary-gold); margin-bottom: 6px; font-size: 0.95rem;">🧩 <span class="lang-es">Banco de Tsumegos</span><span class="lang-en">Tsumego Bank</span></h4>
+                  <p style="font-size: 0.85rem; line-height: 1.4;">
+                    <span class="lang-es">Resolución interactiva con ramas de respuesta de defensa e importador local de archivos SGF.</span>
+                    <span class="lang-en">Interactive solver with defensive response branching and local SGF file imports.</span>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Dedicated App CTAs -->
+              <div class="cta-group" style="justify-content: flex-start;">
+                <a href="docs.html" class="btn btn-primary">
+                  <span class="lang-es">Guía del Usuario</span>
+                  <span class="lang-en">User Manual</span>
+                </a>
+                <a href="privacy.html" class="btn btn-secondary">
+                  <span class="lang-es">Política de Privacidad</span>
+                  <span class="lang-en">Privacy Policy</span>
+                </a>
+              </div>
+            </div>
+
           </div>
         </div>
+
+        <!-- Future apps can be added here as another .project-card block -->
+        
       </div>
     </section>
+
   </main>
 
   <!-- Site Footer -->
