@@ -550,22 +550,16 @@ body {
 html.lang-es-active .lang-es {
   display: block;
 }
-html.lang-es-active span.lang-es, html.lang-es-active strong.lang-es, html.lang-es-active a.lang-es {
+html.lang-es-active span.lang-es, html.lang-es-active strong.lang-es, html.lang-es-active a.lang-es, html.lang-es-active em.lang-es, html.lang-es-active i.lang-es {
   display: inline;
-}
-html.lang-es-active flex.lang-es, html.lang-es-active div.lang-es {
-  display: flex;
 }
 
 /* When document has class 'lang-en-active', show elements with 'lang-en' */
 html.lang-en-active .lang-en {
   display: block;
 }
-html.lang-en-active span.lang-en, html.lang-en-active strong.lang-en, html.lang-en-active a.lang-en {
+html.lang-en-active span.lang-en, html.lang-en-active strong.lang-en, html.lang-en-active a.lang-en, html.lang-en-active em.lang-en, html.lang-en-active i.lang-en {
   display: inline;
-}
-html.lang-en-active flex.lang-en, html.lang-en-active div.lang-en {
-  display: flex;
 }
 
 /* Privacy Page Specifics */
