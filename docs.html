@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es" class="lang-es-active">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZenGoStudio — Guía del Usuario / User Manual</title>
+  <meta name="description" content="User manual and documentation for ZenGoStudio, covering rules of Go, game modes (PvP, WebRTC, Tsumego, KataGo AI), and SGF imports.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header" id="main-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand-logo" id="header-logo">
+        <div class="yin-yang-icon">
+          <div class="logo-stone black"></div>
+          <div class="logo-stone white"></div>
+        </div>
+        <h1>CentripetalForce</h1>
+      </a>
+      
+      <nav>
+        <ul class="nav-menu" id="header-nav-menu">
+          <li><a href="index.html" class="nav-link" id="nav-home"><span class="lang-es">Inicio</span><span class="lang-en">Home</span></a></li>
+          <li><a href="docs.html" class="nav-link active" id="nav-guide"><span class="lang-es">Guía / Docs</span><span class="lang-en">Guide / Docs</span></a></li>
+          <li><a href="privacy.html" class="nav-link" id="nav-privacy"><span class="lang-es">Privacidad</span><span class="lang-en">Privacy</span></a></li>
+          <li>
+            <div class="lang-switcher" id="header-lang-switcher">
+              <button class="lang-btn active" id="btn-lang-es" onclick="setLanguage('es')">ES</button>
+              <button class="lang-btn" id="btn-lang-en" onclick="setLanguage('en')">EN</button>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Docs Section -->
+  <main class="container" id="main-content">
+    <div class="docs-layout" id="docs-layout-container">
+      
+      <!-- Sidebar Navigation -->
+      <aside class="docs-sidebar" id="docs-sidebar-nav">
+        <ul class="docs-nav" id="sidebar-links">
+          <li class="docs-nav-item">
+            <a href="#section-intro" class="docs-nav-link active" onclick="switchSection(event, 'section-intro')">
+              <span class="lang-es">1. Introducción</span>
+              <span class="lang-en">1. Introduction</span>
+            </a>
+          </li>
+          <li class="docs-nav-item">
+            <a href="#section-rules" class="docs-nav-link" onclick="switchSection(event, 'section-rules')">
+              <span class="lang-es">2. Reglas del Go</span>
+              <span class="lang-en">2. Rules of Go</span>
+            </a>
+          </li>
+          <li class="docs-nav-item">
+            <a href="#section-modes" class="docs-nav-link" onclick="switchSection(event, 'section-modes')">
+              <span class="lang-es">3. Modos de Juego</span>
+              <span class="lang-en">3. Game Modes</span>
+            </a>
+          </li>
+          <li class="docs-nav-item">
+            <a href="#section-tsumego" class="docs-nav-link" onclick="switchSection(event, 'section-tsumego')">
+              <span class="lang-es">4. Banco & SGF</span>
+              <span class="lang-en">4. Solver & SGF</span>
+            </a>
+          </li>
+          <li class="docs-nav-item">
+            <a href="#section-katago" class="docs-nav-link" onclick="switchSection(event, 'section-katago')">
+              <span class="lang-es">5. Puente KataGo</span>
+              <span class="lang-en">5. KataGo Bridge</span>
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Main Docs Content -->
+      <section class="docs-content" id="docs-main-content">
+        
+        <!-- Section 1: Intro -->
+        <div id="section-intro" class="docs-section active">
+          <h2>
+            <span class="lang-es">1. Introducción a ZenGoStudio</span>
+            <span class="lang-en">1. Introduction to ZenGoStudio</span>
+          </h2>
+          <div class="lang-es">
+            <p><strong>ZenGoStudio</strong> es un entorno inmersivo diseñado específicamente para el estudio y disfrute del juego de mesa milenario Go (también conocido como Weiqi o Baduk). La aplicación ha sido concebida con un enfoque móvil-first y optimizada tanto para smartphones como para tablets.</p>
+            <p>Nuestra misión es proveer un tablero inteligente libre de distracciones visuales, dotado de herramientas analíticas de nivel profesional e integración nativa de Inteligencia Artificial (KataGo) para jugadores de todos los niveles.</p>
+            <div class="highlight-box">
+              <strong>Nota sobre diseño offline:</strong> ZenGoStudio almacena tus progresos, historiales y archivos localmente en el dispositivo. No recopilamos tu información personal.
+            </div>
+          </div>
+          <div class="lang-en">
+            <p><strong>ZenGoStudio</strong> is an immersive environment designed specifically for studying and enjoying the ancient board game Go (also known as Weiqi or Baduk). The application has been built with a mobile-first philosophy, optimized for smartphones and tablets.</p>
+            <p>Our mission is to provide a smart board free of visual distractions, equipped with professional-grade analysis tools and native Artificial Intelligence integration (KataGo) for players of all skill levels.</p>
+            <div class="highlight-box">
+              <strong>Offline-first Note:</strong> ZenGoStudio stores your progress, game histories, and files locally on your device. We do not collect your personal information.
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 2: Rules -->
+        <div id="section-rules" class="docs-section">
+          <h2>
+            <span class="lang-es">2. Reglas del Go en la Aplicación</span>
+            <span class="lang-en">2. Rules of Go in the App</span>
+          </h2>
+          <div class="lang-es">
+            <p>Para asegurar partidas reglamentariamente correctas, el motor de ZenGoStudio valida cada jugada basándose en las normas tradicionales:</p>
+            <h3>A. Regla de Suicidio</h3>
+            <p>Un jugador no puede colocar una piedra en una intersección que no tenga libertades restantes (líneas adyacentes vacías), a menos que esa jugada capture una o más piedras del oponente. En caso de captura, las piedras contrarias se retiran y la piedra colocada obtiene libertades, haciendo el movimiento completamente legal.</p>
+            <h3>B. Regla de Ko</h3>
+            <p>Para evitar bucles infinitos, no está permitido capturar una única piedra si esto recrea de forma exacta el estado del tablero del turno anterior. El jugador en Ko debe realizar una jugada en otra zona del tablero (una amenaza de Ko) antes de poder recapturar.</p>
+            <h3>C. Métodos de Puntuación</h3>
+            <ul>
+              <li><strong>Reglas Japonesas:</strong> Los puntos se calculan sumando el territorio rodeado por cada color y restando las piedras que les han sido capturadas.</li>
+              <li><strong>Reglas Chinas:</strong> Los puntos se calculan por área controlada, sumando tanto las piedras vivas del propio color sobre el tablero como las intersecciones vacías rodeadas.</li>
+            </ul>
+          </div>
+          <div class="lang-en">
+            <p>To ensure rules-compliant matches, the ZenGoStudio engine validates every move based on traditional rules:</p>
+            <h3>A. Suicide Rule</h3>
+            <p>A player cannot place a stone on an intersection that has no remaining liberties (adjacent empty lines) unless that move captures one or more of the opponent's stones. If stones are captured, they are removed, giving liberties to the placed stone and making the move completely legal.</p>
+            <h3>B. Ko Rule</h3>
+            <p>To prevent infinite loops, recapturing a single stone is not allowed if it exactly recreates the board state of the previous turn. The player in Ko must play a move in another area of the board (a Ko threat) before being allowed to recapture.</p>
+            <h3>C. Scoring Methods</h3>
+            <ul>
+              <li><strong>Japanese Rules:</strong> Score is calculated by adding up surrounded empty territory and subtracting captured stones (prisoners).</li>
+              <li><strong>Chinese Rules:</strong> Score is calculated by area, summing both the player's live stones on the board and their surrounded empty intersections.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Section 3: Game Modes -->
+        <div id="section-modes" class="docs-section">
+          <h2>
+            <span class="lang-es">3. Modos de Juego</span>
+            <span class="lang-en">3. Game Modes</span>
+          </h2>
+          <div class="lang-es">
+            <p>ZenGoStudio ofrece diversos formatos adaptados tanto a la práctica en solitario como al juego competitivo:</p>
+            <h3>A. PvP Local (Tablero Inmersivo)</h3>
+            <p>Permite a dos personas jugar en el mismo dispositivo física y simultáneamente. Al pulsar <strong>Iniciar Juego</strong>, la aplicación oculta la navegación del sistema y maximiza el Goban (tablero) para que ocupe todo el espacio táctil. Incluye relojes con soporte para Byo-Yomi e incrementos Fischer.</p>
+            <h3>B. Multijugador LAN / WebRTC</h3>
+            <p>Juega contra amigos en otra habitación o en cualquier parte del mundo sin registrarte. Ingresa un PIN de 4 dígitos generado por la app; ambos dispositivos se conectarán directamente mediante la red P2P WebRTC.</p>
+            <h3>C. Sandbox de Estudio (Estilo Libre)</h3>
+            <p>Un tablero libre para colocar piedras sin restricciones de turnos, ideal para recrear partidas famosas, probar variantes tácticas o analizar problemas complejos de forma visual.</p>
+          </div>
+          <div class="lang-en">
+            <p>ZenGoStudio offers various formats tailored for solo practice and competitive play:</p>
+            <h3>A. Local PvP (Immersive Goban)</h3>
+            <p>Play against another person face-to-face on the same device. When clicking <strong>Start Game</strong>, the application hides the headers and navigation, scaling the board to cover the full screen. Includes professional chess clocks supporting Byo-Yomi and Fischer increments.</p>
+            <h3>B. WebRTC P2P Multiplayer</h3>
+            <p>Play against friends nearby or worldwide without creating an account. Enter a 4-digit PIN code generated by the app, and both devices will automatically connect directly using WebRTC peer-to-peer signalling.</p>
+            <h3>C. Study Sandbox (Free Board)</h3>
+            <p>A free-play board allowing you to place stones without strict turn restrictions. Ideal for reviewing famous games, testing tactical variants, or exploring complex shapes.</p>
+          </div>
+        </div>
+
+        <!-- Section 4: Tsumego -->
+        <div id="section-tsumego" class="docs-section">
+          <h2>
+            <span class="lang-es">4. Banco de Tsumegos e Importación SGF</span>
+            <span class="lang-en">4. Tsumego Bank & SGF Import</span>
+          </h2>
+          <div class="lang-es">
+            <p>El dominio táctico del Go reside en la resolución de ejercicios de Vida y Muerte (Tsumegos). ZenGoStudio incluye un solucionador interactivo inteligente:</p>
+            <h3>A. Árbol de Respuestas (Branching)</h3>
+            <p>Al intentar solucionar un problema, la aplicación responderá de forma automática reproduciendo los movimientos del defensor. Si juegas un movimiento incorrecto o fallido, el sistema te lo notificará visualmente para que puedas volver a intentar la secuencia correcta.</p>
+            <h3>B. Importación SGF Local</h3>
+            <p>Puedes importar tus propios problemas en formato estándar `.sgf` directamente desde el almacenamiento de tu teléfono. El lector procesará las marcas iniciales de piedras (`AB`, `AW`), el turno de juego (`PL`) y las ramas de variaciones para adaptarlas a la interfaz interactiva de la aplicación.</p>
+          </div>
+          <div class="lang-en">
+            <p>Tactical mastery in Go comes from solving life-and-death puzzles (Tsumegos). ZenGoStudio includes a smart interactive solver:</p>
+            <h3>A. Dynamic Branching</h3>
+            <p>When solving an exercise, the app automatically replies as the defender. If you make a mistake, the system provides visual feedback, allowing you to backtrack and find the winning sequence.</p>
+            <h3>B. Local SGF Problem Imports</h3>
+            <p>Import your own problem files in standard `.sgf` format directly from your device storage. The parser reads initial stones (`AB`, `AW`), starting player (`PL`), and variation trees, converting them into an interactive game challenge.</p>
+          </div>
+        </div>
+
+        <!-- Section 5: KataGo -->
+        <div id="section-katago" class="docs-section">
+          <h2>
+            <span class="lang-es">5. Puente de Inteligencia Artificial (KataGo)</span>
+            <span class="lang-en">5. KataGo AI Engine Bridge</span>
+          </h2>
+          <div class="lang-es">
+            <p>Para análisis de nivel profesional, la aplicación integra de forma nativa la red neuronal de <strong>KataGo</strong>:</p>
+            <h3>A. Motor ARM64 Nativo (Android/iOS)</h3>
+            <p>En dispositivos móviles, KataGo corre directamente en el hardware local usando la GPU/NPU del dispositivo a través de GTP de baja latencia. Esto permite obtener análisis exactos y sugerencias de jugadas óptimas sin necesidad de conexión a internet o servidores remotos.</p>
+            <h3>B. Análisis Interactivo de Partidas</h3>
+            <p>Activa el modo de asistencia para visualizar un mapa de calor en tiempo real que indica los mejores puntos de juego en el tablero, la estimación del porcentaje de victoria para cada bando y el cálculo exacto del territorio (puntuación estimada).</p>
+          </div>
+          <div class="lang-en">
+            <p>For professional-grade game analysis, the app features native integration with the <strong>KataGo</strong> neural network:</p>
+            <h3>A. Native ARM64 Engine (Android/iOS)</h3>
+            <p>On mobile platforms, KataGo runs locally on the device's GPU/NPU via low-latency GTP. This provides accurate move suggestions and win-rate evaluations without requiring internet connectivity or remote servers.</p>
+            <h3>B. Interactive Game Review</h3>
+            <p>Enable the analysis helper to display a real-time heatmap representing the best candidate moves, winrate estimates, and live territory projections.</p>
+          </div>
+        </div>
+
+      </section>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" id="main-footer">
+    <div class="container footer-wrapper">
+      <p id="footer-copy">&copy; 2026 CentripetalForce. <span class="lang-es">Todos los derechos reservados.</span><span class="lang-en">All rights reserved.</span></p>
+      <ul class="footer-links" id="footer-links-list">
+        <li><a href="index.html" class="footer-link"><span class="lang-es">Inicio</span><span class="lang-en">Home</span></a></li>
+        <li><a href="docs.html" class="footer-link"><span class="lang-es">Guía / Docs</span><span class="lang-en">Guide / Docs</span></a></li>
+        <li><a href="privacy.html" class="footer-link"><span class="lang-es">Privacidad</span><span class="lang-en">Privacy</span></a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    // Language Switcher Logic
+    function setLanguage(lang) {
+      const htmlEl = document.documentElement;
+      const btnEs = document.getElementById('btn-lang-es');
+      const btnEn = document.getElementById('btn-lang-en');
+
+      if (lang === 'en') {
+        htmlEl.classList.remove('lang-es-active');
+        htmlEl.classList.add('lang-en-active');
+        htmlEl.setAttribute('lang', 'en');
+        if (btnEs) btnEs.classList.remove('active');
+        if (btnEn) btnEn.classList.add('active');
+        localStorage.setItem('cf_lang', 'en');
+      } else {
+        htmlEl.classList.remove('lang-en-active');
+        htmlEl.classList.add('lang-es-active');
+        htmlEl.setAttribute('lang', 'es');
+        if (btnEs) btnEs.classList.add('active');
+        if (btnEn) btnEn.classList.remove('active');
+        localStorage.setItem('cf_lang', 'es');
+      }
+    }
+
+    // Interactive tabs for sections
+    function switchSection(event, sectionId) {
+      event.preventDefault();
+      
+      // Remove active from all sidebar links
+      const links = document.querySelectorAll('.docs-nav-link');
+      links.forEach(link => link.classList.remove('active'));
+      
+      // Add active to clicked link
+      event.currentTarget.classList.add('active');
+      
+      // Hide all sections
+      const sections = document.querySelectorAll('.docs-section');
+      sections.forEach(section => section.classList.remove('active'));
+      
+      // Show target section
+      const target = document.getElementById(sectionId);
+      if (target) target.classList.add('active');
+
+      // Scroll smoothly to main content container if on mobile
+      if (window.innerWidth <= 768) {
+        document.getElementById('docs-main-content').scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    // Initialize Language Preference
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedLang = localStorage.getItem('cf_lang') || 'es';
+      setLanguage(savedLang);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es" class="lang-es-active">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CentripetalForce — ZenGoStudio Portal</title>
+  <meta name="description" content="Official portal for CentripetalForce development studio and ZenGoStudio, the premium Go (Weiqi) app featuring local PvP, WebRTC multiplayer, and KataGo AI.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header" id="main-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand-logo" id="header-logo">
+        <div class="yin-yang-icon">
+          <div class="logo-stone black"></div>
+          <div class="logo-stone white"></div>
+        </div>
+        <h1>CentripetalForce</h1>
+      </a>
+      
+      <nav>
+        <ul class="nav-menu" id="header-nav-menu">
+          <li><a href="index.html" class="nav-link active" id="nav-home"><span class="lang-es">Inicio</span><span class="lang-en">Home</span></a></li>
+          <li><a href="docs.html" class="nav-link" id="nav-guide"><span class="lang-es">Guía / Docs</span><span class="lang-en">Guide / Docs</span></a></li>
+          <li><a href="privacy.html" class="nav-link" id="nav-privacy"><span class="lang-es">Privacidad</span><span class="lang-en">Privacy</span></a></li>
+          <li>
+            <div class="lang-switcher" id="header-lang-switcher">
+              <button class="lang-btn active" id="btn-lang-es" onclick="setLanguage('es')">ES</button>
+              <button class="lang-btn" id="btn-lang-en" onclick="setLanguage('en')">EN</button>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main id="main-content">
+    <section class="hero" id="hero-section">
+      <div class="container">
+        <h2 class="hero-subtitle" id="hero-sub">CentripetalForce Studio</h2>
+        <h1 class="hero-title" id="hero-main-title">
+          <span class="lang-es">Descubre el Arte del Go con <span>ZenGoStudio</span></span>
+          <span class="lang-en">Master the Art of Go with <span>ZenGoStudio</span></span>
+        </h1>
+        <p class="hero-description" id="hero-desc">
+          <span class="lang-es">Una plataforma premium y minimalista diseñada para jugar, estudiar y dominar el Weiqi (Go / Baduk). Desde partidas locales y WebRTC P2P hasta el análisis táctico asistido por la IA KataGo.</span>
+          <span class="lang-en">A premium, minimalist platform designed to play, study, and master Weiqi (Go / Baduk). Featuring local PvP, WebRTC P2P multiplayer, and advanced tactical analysis powered by KataGo AI.</span>
+        </p>
+        <div class="cta-group" id="hero-cta">
+          <a href="docs.html" class="btn btn-primary" id="cta-docs">
+            <span class="lang-es">Ver Guía de Uso</span>
+            <span class="lang-en">View User Manual</span>
+          </a>
+          <a href="privacy.html" class="btn btn-secondary" id="cta-privacy">
+            <span class="lang-es">Política de Privacidad</span>
+            <span class="lang-en">Privacy Policy</span>
+          </a>
+        </div>
+
+        <!-- Interactive Board Mockup -->
+        <div class="board-mockup-wrapper" id="interactive-goban">
+          <!-- Row 1 -->
+          <div class="board-cell"></div>
+          <div class="board-cell"></div>
+          <div class="board-cell"></div>
+          <div class="board-cell"></div>
+          <div class="board-cell"></div>
+          <div class="board-cell"></div>
+          <div class="board-cell"></div>
+          
+          <!-- Row 2 -->
+          <div class="board-cell"></div>
+          <div class="board-cell"><div class="board-stone black" onclick="toggleStone(this)"></div></div>
+          <div class="board-cell"></div>
+          <div class="board-cell"></div>
+          <div class="board-cell"><div class="board-stone white" onclick="toggleStone(this)"></div></div>
+          <div class="board-cell"></div>
+          <div class="board-cell"></div>
+          
+          <!-- Row 3 -->
+          <div class="board-cell"></div>
+          <div class="board-cell"></div>
+          <div class="board-cell"><div class="board-stone black" onclick="toggleStone(this)"></div></div>
+          <div class="board-cell"></div>
+          <div class="board-cell"></div>
+          <div class="board-cell"></div>
+          <div class="board-cell"></div>
+          
+          <!-- Row 4 (Center Star) -->
+          <div class="board-cell"></div>
+          <div class="board-cell"></div>
+          <div class="board-cell"></div>
+          <div class="board-cell"><div class="board-stone white" onclick="toggleStone(this)"></div></div>
+          <div class="board-cell"></div>
+          <div class="board-cell"></div>
+          <div class="board-cell"></div>
+          
+          <!-- Row 5 -->
+          <div class="board-cell"></div>
+          <div class="board-cell"></div>
+          <div class="board-cell"></div>
+          <div class="board-cell"></div>
+          <div class="board-cell"><div class="board-stone black" onclick="toggleStone(this)"></div></div>
+          <div class="board-cell"></div>
+          <div class="board-cell"></div>
+          
+          <!-- Row 6 -->
+          <div class="board-cell"></div>
+          <div class="board-cell"><div class="board-stone white" onclick="toggleStone(this)"></div></div>
+          <div class="board-cell"></div>
+          <div class="board-cell"></div>
+          <div class="board-cell"><div class="board-stone black" onclick="toggleStone(this)"></div></div>
+          <div class="board-cell"></div>
+          <div class="board-cell"></div>
+          
+          <!-- Row 7 -->
+          <div class="board-cell"></div>
+          <div class="board-cell"></div>
+          <div class="board-cell"></div>
+          <div class="board-cell"></div>
+          <div class="board-cell"></div>
+          <div class="board-cell"></div>
+          <div class="board-cell"></div>
+        </div>
+        <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 12px;">
+          <span class="lang-es">Prueba a hacer clic en las piedras del tablero</span>
+          <span class="lang-en">Try clicking on the stones on the board</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features-section">
+      <div class="container">
+        <div class="section-header" id="features-header">
+          <h2>
+            <span class="lang-es">Características de ZenGoStudio</span>
+            <span class="lang-en">ZenGoStudio Features</span>
+          </h2>
+          <p>
+            <span class="lang-es">Desarrollado meticulosamente para ofrecer una experiencia táctil inmersiva y un aprendizaje de nivel profesional.</span>
+            <span class="lang-en">Meticulously developed to provide an immersive tactile experience and professional-grade study tools.</span>
+          </p>
+        </div>
+
+        <div class="grid" id="features-grid">
+          <!-- Card 1 -->
+          <div class="card" id="card-pvp">
+            <div class="card-icon">⚔️</div>
+            <h3>
+              <span class="lang-es">Partidas Locales (PvP)</span>
+              <span class="lang-en">Local Matches (PvP)</span>
+            </h3>
+            <p>
+              <span class="lang-es">Relojes profesionales de Byo-Yomi y Fischer con control táctil optimizado y escala inmersiva de tablero (100% de pantalla).</span>
+              <span class="lang-en">Professional Byo-Yomi and Fischer clocks with optimized touch controls and an immersive 100% board layout.</span>
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="card" id="card-webrtc">
+            <div class="card-icon">🌐</div>
+            <h3>
+              <span class="lang-es">Multijugador P2P WebRTC</span>
+              <span class="lang-en">P2P WebRTC Multiplayer</span>
+            </h3>
+            <p>
+              <span class="lang-es">Conexiones directas punto a punto seguras y rápidas usando códigos de 4 dígitos. Sin registros ni cuentas obligatorias.</span>
+              <span class="lang-en">Direct, secure, and fast peer-to-peer connections using 4-digit PIN codes. No registration or accounts required.</span>
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="card" id="card-tsumego">
+            <div class="card-icon">🧩</div>
+            <h3>
+              <span class="lang-es">Banco de Tsumegos</span>
+              <span class="lang-en">Tsumego Bank</span>
+            </h3>
+            <p>
+              <span class="lang-es">Colección seleccionada de problemas de vida y muerte. Evalúa soluciones dinámicas e importa tus propios archivos SGF de táctica.</span>
+              <span class="lang-en">Curated collection of life-and-death problems. Tests dynamic branching paths and supports importing custom tactical SGF files.</span>
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="card" id="card-katago">
+            <div class="card-icon">🧠</div>
+            <h3>
+              <span class="lang-es">Análisis KataGo AI</span>
+              <span class="lang-en">KataGo AI Analysis</span>
+            </h3>
+            <p>
+              <span class="lang-es">Integración nativa del motor de IA KataGo para análisis interactivo en tiempo real y asistencia táctica en tus partidas de estudio.</span>
+              <span class="lang-en">Native integration of the KataGo AI engine for real-time interactive game analysis and tactical guidance during study.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" id="main-footer">
+    <div class="container footer-wrapper">
+      <p id="footer-copy">&copy; 2026 CentripetalForce. <span class="lang-es">Todos los derechos reservados.</span><span class="lang-en">All rights reserved.</span></p>
+      <ul class="footer-links" id="footer-links-list">
+        <li><a href="index.html" class="footer-link"><span class="lang-es">Inicio</span><span class="lang-en">Home</span></a></li>
+        <li><a href="docs.html" class="footer-link"><span class="lang-es">Guía / Docs</span><span class="lang-en">Guide / Docs</span></a></li>
+        <li><a href="privacy.html" class="footer-link"><span class="lang-es">Privacidad</span><span class="lang-en">Privacy</span></a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    // Language Switcher Logic
+    function setLanguage(lang) {
+      const htmlEl = document.documentElement;
+      const btnEs = document.getElementById('btn-lang-es');
+      const btnEn = document.getElementById('btn-lang-en');
+
+      if (lang === 'en') {
+        htmlEl.classList.remove('lang-es-active');
+        htmlEl.classList.add('lang-en-active');
+        htmlEl.setAttribute('lang', 'en');
+        if (btnEs) btnEs.classList.remove('active');
+        if (btnEn) btnEn.classList.add('active');
+        localStorage.setItem('cf_lang', 'en');
+      } else {
+        htmlEl.classList.remove('lang-en-active');
+        htmlEl.classList.add('lang-es-active');
+        htmlEl.setAttribute('lang', 'es');
+        if (btnEs) btnEs.classList.add('active');
+        if (btnEn) btnEn.classList.remove('active');
+        localStorage.setItem('cf_lang', 'es');
+      }
+    }
+
+    // Initialize Language Preference
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedLang = localStorage.getItem('cf_lang') || 'es';
+      setLanguage(savedLang);
+    });
+
+    // Fun stone click handler
+    function toggleStone(stoneEl) {
+      if (stoneEl.classList.contains('black')) {
+        stoneEl.classList.remove('black');
+        stoneEl.classList.add('white');
+      } else {
+        stoneEl.classList.remove('white');
+        stoneEl.classList.add('black');
+      }
+    }
+  </script>
+</body>
+</html>

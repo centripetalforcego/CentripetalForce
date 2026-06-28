@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es" class="lang-es-active">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZenGoStudio — Política de Privacidad / Privacy Policy</title>
+  <meta name="description" content="Official Privacy Policy for ZenGoStudio, explaining data handling, local storage, WebRTC matches, and Google Play billing details.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header" id="main-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand-logo" id="header-logo">
+        <div class="yin-yang-icon">
+          <div class="logo-stone black"></div>
+          <div class="logo-stone white"></div>
+        </div>
+        <h1>CentripetalForce</h1>
+      </a>
+      
+      <nav>
+        <ul class="nav-menu" id="header-nav-menu">
+          <li><a href="index.html" class="nav-link" id="nav-home"><span class="lang-es">Inicio</span><span class="lang-en">Home</span></a></li>
+          <li><a href="docs.html" class="nav-link" id="nav-guide"><span class="lang-es">Guía / Docs</span><span class="lang-en">Guide / Docs</span></a></li>
+          <li><a href="privacy.html" class="nav-link active" id="nav-privacy"><span class="lang-es">Privacidad</span><span class="lang-en">Privacy</span></a></li>
+          <li>
+            <div class="lang-switcher" id="header-lang-switcher">
+              <button class="lang-btn active" id="btn-lang-es" onclick="setLanguage('es')">ES</button>
+              <button class="lang-btn" id="btn-lang-en" onclick="setLanguage('en')">EN</button>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Privacy Content -->
+  <main class="container" id="main-content">
+    <div class="privacy-layout" id="privacy-policy-container">
+      
+      <!-- Bilingual Heading Toggle -->
+      <h1 style="font-family: var(--font-title); font-size: 2.2rem; text-align: center; margin-bottom: 8px;">
+        <span class="lang-es">Política de Privacidad</span>
+        <span class="lang-en">Privacy Policy</span>
+      </h1>
+      
+      <p class="privacy-meta" id="privacy-metadata">
+        <span><span class="lang-es">Última actualización: 25 de junio de 2026</span><span class="lang-en">Last updated: June 25, 2026</span></span>
+        <span>CentripetalForce / ZenGoStudio</span>
+      </p>
+
+      <!-- SPANISH PRIVACY POLICY -->
+      <div class="lang-es" id="policy-es">
+        <p>Esta Política de Privacidad describe cómo <strong>ZenGoStudio</strong> ("la Aplicación") recopila, utiliza y comparte la información del usuario. La Aplicación es un juego fuera de línea (offline-first) diseñado para jugar y estudiar el juego de mesa Go (Weiqi / Baduk).</p>
+        
+        <h2>1. Recopilación de Información y Datos Personales</h2>
+        <p><strong>ZenGoStudio no recopila, almacena, transmite ni comparte ningún tipo de información personal identificable (PII) en servidores externos.</strong></p>
+        <ul>
+          <li><strong>Almacenamiento Local:</strong> Todo tu progreso, historial de clasificaciones (Rank), estadísticas de resolución de Tsumegos y preferencias de configuración se almacenan localmente en tu dispositivo mediante almacenamiento persistente del sistema (<code>localStorage</code> y base de datos local). Estos datos nunca salen de tu dispositivo.</li>
+          <li><strong>Archivos SGF:</strong> Los archivos de partidas de Go (.sgf) que importas o exportas se procesan y almacenan localmente en el almacenamiento físico de tu dispositivo. No tenemos acceso a tus archivos.</li>
+        </ul>
+
+        <h2>2. Conectividad y Servicios de Terceros</h2>
+        <p>La Aplicación ofrece ciertas funcionalidades que requieren conectividad básica a internet, operadas a través de terceros:</p>
+        <ul>
+          <li><strong>Multijugador en Red Directa (WebRTC):</strong> La funcionalidad multijugador utiliza el framework PeerJS y sus servidores de señalización públicos de forma temporal para permitir que dos dispositivos se conecten directamente (punto a punto) mediante un PIN de 4 dígitos. No se registra ninguna conversación de chat, dirección IP ni datos de partida en servidores centrales; la transmisión del estado de juego ocurre directamente entre los dos jugadores.</li>
+          <li><strong>Google Play Billing (Compras Integradas):</strong> El procesamiento de la compra única para desbloquear el tier Pro se realiza de manera segura y directa a través del sistema de facturación oficial de Google Play. La Aplicación no tiene acceso a tus datos de pago, tarjetas de crédito ni información bancaria. Solo recibimos un token de confirmación firmado por Google para validar tu acceso a las características premium.</li>
+        </ul>
+
+        <h2>3. Cambios a esta Política</h2>
+        <p>Nos reservamos el derecho de actualizar esta Política de Privacidad en cualquier momento. Se recomienda revisar esta página periódicamente para conocer cualquier cambio.</p>
+
+        <h2>4. Contacto</h2>
+        <p>Si tienes alguna duda sobre esta Política de Privacidad, puedes ponerte en contacto con nosotros a través de tu dirección de soporte en Google Play.</p>
+      </div>
+
+      <!-- ENGLISH PRIVACY POLICY -->
+      <div class="lang-en" id="policy-en">
+        <p>This Privacy Policy describes how <strong>ZenGoStudio</strong> ("the Application") collects, uses, and shares user information. The Application is an offline-first game designed to play and study the board game Go (Weiqi / Baduk).</p>
+        
+        <h2>1. Information Collection and Personal Data</h2>
+        <p><strong>ZenGoStudio does not collect, store, transmit, or share any personally identifiable information (PII) on external servers.</strong></p>
+        <ul>
+          <li><strong>Local Storage:</strong> All your progress, ranked rating history (Rank), Tsumego solving statistics, and configuration settings are stored locally on your device via system persistent storage (<code>localStorage</code> and local database). This data never leaves your device.</li>
+          <li><strong>SGF Files:</strong> Any Go game files (.sgf) that you import or export are processed and stored locally on your device's physical storage. We do not have access to your files.</li>
+        </ul>
+
+        <h2>2. Connectivity and Third-Party Services</h2>
+        <p>The Application offers certain features that require basic internet connectivity, operated through third-party services:</p>
+        <ul>
+          <li><strong>Direct Match Multiplayer (WebRTC):</strong> The multiplayer feature temporarily uses the PeerJS framework and its public signaling servers to allow two devices to connect directly (peer-to-peer) using a 4-digit PIN. No chat history, IP addresses, or game states are stored on central servers; game data transmission occurs directly between the two players.</li>
+          <li><strong>Google Play Billing (In-App Purchases):</strong> The processing of the one-time purchase to unlock the Pro tier is performed securely and directly through the official Google Play billing system. The Application does not have access to your payment details, credit card numbers, or banking information. We only receive a signed confirmation token from Google to validate your access to premium features.</li>
+        </ul>
+
+        <h2>3. Changes to this Policy</h2>
+        <p>We reserve the right to update this Privacy Policy at any time. You are advised to review this page periodically for any changes.</p>
+
+        <h2>4. Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy, you can contact us through your support email address registered on Google Play.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" id="main-footer">
+    <div class="container footer-wrapper">
+      <p id="footer-copy">&copy; 2026 CentripetalForce. <span class="lang-es">Todos los derechos reservados.</span><span class="lang-en">All rights reserved.</span></p>
+      <ul class="footer-links" id="footer-links-list">
+        <li><a href="index.html" class="footer-link"><span class="lang-es">Inicio</span><span class="lang-en">Home</span></a></li>
+        <li><a href="docs.html" class="footer-link"><span class="lang-es">Guía / Docs</span><span class="lang-en">Guide / Docs</span></a></li>
+        <li><a href="privacy.html" class="footer-link"><span class="lang-es">Privacidad</span><span class="lang-en">Privacy</span></a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    // Language Switcher Logic
+    function setLanguage(lang) {
+      const htmlEl = document.documentElement;
+      const btnEs = document.getElementById('btn-lang-es');
+      const btnEn = document.getElementById('btn-lang-en');
+
+      if (lang === 'en') {
+        htmlEl.classList.remove('lang-es-active');
+        htmlEl.classList.add('lang-en-active');
+        htmlEl.setAttribute('lang', 'en');
+        if (btnEs) btnEs.classList.remove('active');
+        if (btnEn) btnEn.classList.add('active');
+        localStorage.setItem('cf_lang', 'en');
+      } else {
+        htmlEl.classList.remove('lang-en-active');
+        htmlEl.classList.add('lang-es-active');
+        htmlEl.setAttribute('lang', 'es');
+        if (btnEs) btnEs.classList.add('active');
+        if (btnEn) btnEn.classList.remove('active');
+        localStorage.setItem('cf_lang', 'es');
+      }
+    }
+
+    // Initialize Language Preference
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedLang = localStorage.getItem('cf_lang') || 'es';
+      setLanguage(savedLang);
+    });
+  </script>
+</body>
+</html>
