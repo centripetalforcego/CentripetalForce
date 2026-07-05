@@ -10,6 +10,31 @@
 </head>
 <body>
 
+  <!-- Subtle Centripetal Force Background Animation -->
+  <div class="centripetal-bg-container">
+    <div class="force-center"></div>
+    <div class="orbit-ring orbit-ring-1">
+      <div class="orbit-rotator rotator-1">
+        <div class="orbit-particle"></div>
+      </div>
+    </div>
+    <div class="orbit-ring orbit-ring-2">
+      <div class="orbit-rotator rotator-2">
+        <div class="orbit-particle"></div>
+      </div>
+    </div>
+    <div class="orbit-ring orbit-ring-3">
+      <div class="orbit-rotator rotator-3">
+        <div class="orbit-particle"></div>
+      </div>
+    </div>
+    <div class="orbit-ring orbit-ring-4">
+      <div class="orbit-rotator rotator-4">
+        <div class="orbit-particle"></div>
+      </div>
+    </div>
+  </div>
+
   <!-- Site Header -->
   <header class="site-header" id="main-header">
     <div class="container nav-wrapper">
@@ -224,8 +249,8 @@
       <div class="container">
         <div class="gallery-header">
           <h2>
-            <span class="lang-es">Capturas de Pantalla</span>
-            <span class="lang-en">App Screenshots</span>
+            <span class="lang-es">Capturas de ZenGoStudio</span>
+            <span class="lang-en">ZenGoStudio Screenshots</span>
           </h2>
           <p>
             <span class="lang-es">Explora la interfaz moderna y las potentes características de ZenGoStudio en acción.</span>
@@ -314,17 +339,17 @@
                 </div>
               </div>
 
-              <!-- Slide 6: Tablet View Heatmap -->
+              <!-- Slide 6: Tablet View AI Panel -->
               <div class="carousel-slide">
-                <img src="images/6.jpeg" alt="Tablet Landscape Heatmap" onclick="openLightbox(5)">
+                <img src="images/6.jpeg" alt="Tablet Landscape AI Panel" onclick="openLightbox(5)">
                 <div class="carousel-caption">
                   <h3>
-                    <span class="lang-es">Modo Tablet y Mapa de Calor IA</span>
-                    <span class="lang-en">Tablet Mode & AI Heatmap</span>
+                    <span class="lang-es">Modo Tablet y Panel de IA</span>
+                    <span class="lang-en">Tablet Mode & AI Control Panel</span>
                   </h3>
                   <p>
-                    <span class="lang-es">Disfruta de la vista horizontal en tablets con panel lateral completo, sugerencias de jugadas en tiempo real y estimación de puntos de KataGo.</span>
-                    <span class="lang-en">Enjoy tablet landscape view with a dedicated side panel, real-time move suggestions, and KataGo score estimation.</span>
+                    <span class="lang-es">Disfruta de la vista horizontal en tablets con panel lateral de control de KataGo, estimación de puntuación y sugerencias de jugadas en tiempo real.</span>
+                    <span class="lang-en">Enjoy tablet landscape view with a dedicated KataGo AI side control panel, score estimation, and real-time move suggestions.</span>
                   </p>
                 </div>
               </div>
@@ -412,38 +437,21 @@
           </div>
 
           <div class="beta-cards">
-            <!-- Card 1: Direct APK Download -->
-            <div class="beta-card">
+            <!-- Google Play Store: Coming Soon -->
+            <div class="beta-card coming-soon-card">
               <div class="beta-card-icon">🤖</div>
-              <h4>
-                <span class="lang-es">Descarga APK Directa</span>
-                <span class="lang-en">Direct APK Download</span>
-              </h4>
-              <p>
-                <span class="lang-es">Descarga e instala el archivo APK más reciente directamente en tu dispositivo Android.</span>
-                <span class="lang-en">Download and install the latest APK file directly on your Android device.</span>
-              </p>
-              <a href="zengostudio.apk" class="btn btn-primary beta-btn" download>
-                <span class="lang-es">Descargar APK</span>
-                <span class="lang-en">Download APK</span>
-              </a>
-            </div>
-
-            <!-- Card 2: Google Play Store -->
-            <div class="beta-card">
-              <div class="beta-card-icon">✨</div>
               <h4>
                 <span class="lang-es">Google Play Store</span>
                 <span class="lang-en">Google Play Store</span>
               </h4>
               <p>
-                <span class="lang-es">Únete a la prueba beta oficial de Google Play Store para actualizaciones automáticas y seguras.</span>
-                <span class="lang-en">Join the official Google Play Store beta test for safe and automatic updates.</span>
+                <span class="lang-es">La aplicación estará disponible próximamente en Google Play para su descarga y pruebas beta de manera oficial y automática.</span>
+                <span class="lang-en">The application will be available soon on Google Play for official and automatic download and beta testing.</span>
               </p>
-              <a href="market://details?id=com.zengo.app" class="btn btn-secondary beta-btn">
-                <span class="lang-es">Ver en Google Play</span>
-                <span class="lang-en">View on Google Play</span>
-              </a>
+              <div class="btn btn-secondary beta-btn disabled-btn" style="opacity: 0.6; cursor: not-allowed; border-color: rgba(255, 255, 255, 0.1);">
+                <span class="lang-es">Próximamente</span>
+                <span class="lang-en">Coming Soon</span>
+              </div>
             </div>
           </div>
 
@@ -554,7 +562,7 @@
         "Tablero Inmersivo (19x19) — Interfaz libre de distracciones con realismo natural.",
         "Gráfico y Análisis de IA — Identifica errores críticos y blunders con KataGo.",
         "Visor de SGF — Sigue la secuencia paso a paso con numeración en las piedras.",
-        "Mapa de Calor de KataGo en Tablet — Vista horizontal con panel de control de IA."
+        "Panel de Control de KataGo en Tablet — Vista horizontal con panel lateral de control de IA."
       ],
       en: [
         "Local Game Configuration — Choose board size, rules, komi, and time limits.",
@@ -562,7 +570,7 @@
         "Immersive Goban View (19x19) — Distraction-free interface with realistic styling.",
         "AI Chart & Blunder Analysis — Identify mistakes and critical moves via KataGo.",
         "SGF Viewer — Step through moves with numbers overlayed on stones.",
-        "KataGo Heatmap on Tablet — Landscape layout with complete AI side controls."
+        "KataGo Control Panel on Tablet — Landscape layout with complete AI side controls."
       ]
     };
 

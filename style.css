@@ -375,6 +375,7 @@ body {
 }
 
 /* Beautiful Interactive Goban Mockup */
+/* Beautiful Interactive Goban Mockup aligned on Intersections */
 .board-mockup-wrapper {
   margin: 50px auto 20px;
   max-width: 320px;
@@ -389,23 +390,7 @@ body {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(7, 1fr);
-  gap: 2px;
-}
-
-.board-mockup-wrapper::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  /* Grid lines overlay */
-  background-image: 
-    linear-gradient(rgba(0,0,0,0.25) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,0,0,0.25) 1px, transparent 1px);
-  background-size: calc(100% / 6) calc(100% / 6);
-  background-position: 0 0;
-  pointer-events: none;
+  gap: 0; /* Gaps removed so grid lines align seamlessly */
 }
 
 .board-cell {
@@ -416,11 +401,62 @@ body {
   z-index: 10;
 }
 
+/* Horizontal and Vertical lines crossing at the exact center of each cell */
+.board-cell::before,
+.board-cell::after {
+  content: '';
+  position: absolute;
+  background: rgba(0, 0, 0, 0.45); /* Clear, crisp grid lines */
+  pointer-events: none;
+}
+
+/* Horizontal line: spans full width, centered vertically */
+.board-cell::before {
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  transform: translateY(-50%);
+}
+
+/* Vertical line: spans full height, centered horizontally */
+.board-cell::after {
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  transform: translateX(-50%);
+}
+
+/* --- Edge and Corner alignment so lines terminate exactly at outer intersections --- */
+
+/* First row: vertical lines only go from center (50%) to bottom (100%) */
+.board-cell:nth-child(-n+7)::after {
+  top: 50%;
+}
+
+/* Last row: vertical lines only go from top (0) to center (50%) */
+.board-cell:nth-child(n+43)::after {
+  bottom: 50%;
+}
+
+/* First column: horizontal lines only go from center (50%) to right (100%) */
+.board-cell:nth-child(7n+1)::before {
+  left: 50%;
+}
+
+/* Last column: horizontal lines only go from left (0) to center (50%) */
+.board-cell:nth-child(7n)::before {
+  right: 50%;
+}
+
 .board-stone {
   width: 85%;
   height: 85%;
   border-radius: 50%;
   transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  z-index: 15; /* Renders above the crossing lines */
 }
 
 .board-stone.black {
@@ -1105,5 +1141,81 @@ html.lang-en-active span.lang-en, html.lang-en-active strong.lang-en, html.lang-
     display: none;
   }
 }
+
+/* Subtle Centripetal Force Background Animation */
+.centripetal-bg-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Colocado exactamente sobre el fondo del body */
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0.55; /* Mayor opacidad para que sea visible en cualquier pantalla */
+}
+
+.force-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background: var(--primary-gold);
+  border-radius: 50%;
+  box-shadow: 0 0 35px 12px rgba(212, 175, 55, 0.5);
+  transform: translate(-50%, -50%);
+}
+
+.orbit-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px dashed rgba(212, 175, 55, 0.15); /* Órbitas punteadas más visibles */
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.orbit-ring-1 { width: 250px; height: 250px; }
+.orbit-ring-2 { width: 500px; height: 500px; }
+.orbit-ring-3 { width: 800px; height: 800px; }
+.orbit-ring-4 { width: 1200px; height: 1200px; }
+
+.orbit-rotator {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.orbit-particle {
+  position: absolute;
+  width: 6px; /* Partículas más grandes */
+  height: 6px;
+  background: var(--primary-gold);
+  border-radius: 50%;
+  box-shadow: 0 0 10px 2px var(--primary-gold); /* Mayor brillo */
+  opacity: 0.85;
+}
+
+/* Position particles on the dashed rings */
+.orbit-ring-1 .orbit-particle { top: 0; left: 50%; transform: translate(-50%, -50%); }
+.orbit-ring-2 .orbit-particle { top: 50%; left: 0; transform: translate(-50%, -50%); }
+.orbit-ring-3 .orbit-particle { top: 0; left: 50%; transform: translate(-50%, -50%); }
+.orbit-ring-4 .orbit-particle { top: 50%; left: 100%; transform: translate(-50%, -50%); }
+
+/* Rotation Animations for Orbital Movement */
+.rotator-1 { animation: orbitRotate 20s linear infinite; }
+.rotator-2 { animation: orbitRotate 35s linear infinite reverse; }
+.rotator-3 { animation: orbitRotate 55s linear infinite; }
+.rotator-4 { animation: orbitRotate 80s linear infinite reverse; }
+
+@keyframes orbitRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+
 
 

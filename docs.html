@@ -109,28 +109,34 @@
             <span class="lang-en">2. Rules of Go in the App</span>
           </h2>
           <div class="lang-es">
-            <p>Para asegurar partidas reglamentariamente correctas, el motor de ZenGoStudio valida cada jugada basándose en las normas tradicionales:</p>
-            <h3>A. Regla de Suicidio</h3>
-            <p>Un jugador no puede colocar una piedra en una intersección que no tenga libertades restantes (líneas adyacentes vacías), a menos que esa jugada capture una o más piedras del oponente. En caso de captura, las piedras contrarias se retiran y la piedra colocada obtiene libertades, haciendo el movimiento completamente legal.</p>
-            <h3>B. Regla de Ko</h3>
-            <p>Para evitar bucles infinitos, no está permitido capturar una única piedra si esto recrea de forma exacta el estado del tablero del turno anterior. El jugador en Ko debe realizar una jugada en otra zona del tablero (una amenaza de Ko) antes de poder recapturar.</p>
-            <h3>C. Métodos de Puntuación</h3>
-            <ul>
-              <li><strong>Reglas Japonesas:</strong> Los puntos se calculan sumando el territorio rodeado por cada color y restando las piedras que les han sido capturadas.</li>
-              <li><strong>Reglas Chinas:</strong> Los puntos se calculan por área controlada, sumando tanto las piedras vivas del propio color sobre el tablero como las intersecciones vacías rodeadas.</li>
-            </ul>
+            <p>Para aprender a jugar rápidamente y entender el comportamiento del validador de ZenGoStudio, estas son las reglas esenciales y mecánicas fundamentales de captura:</p>
+            
+            <h3>A. Libertades</h3>
+            <p>Cada piedra colocada en el tablero debe tener al menos una intersección adyacente (horizontal o vertical) que esté vacía. Esta intersección libre se llama <strong>libertad</strong>. Si varias piedras del mismo color están adyacentes entre sí, forman una sola cadena o grupo y comparten todas sus libertades.</p>
+            
+            <h3>B. Atari</h3>
+            <p>Cuando a una piedra o grupo de piedras le queda una sola libertad restante, se dice que está en <strong>Atari</strong>. Esto significa que está a un solo movimiento de ser capturada por el oponente en su siguiente turno.</p>
+            
+            <h3>C. Captura y Suicidio</h3>
+            <p>Si ocupas todas las libertades de un grupo enemigo, este queda capturado y se retira del tablero. La regla del <strong>Suicidio</strong> prohíbe jugar una piedra en una intersección donde no tenga libertades, a menos que ese movimiento capture piedras enemigas y libere espacio en el tablero, haciéndolo completamente legal.</p>
+            
+            <h3>D. Regla de Ko (No Repetición)</h3>
+            <p>Para evitar bucles infinitos, no está permitido capturar una única piedra si esto recrea de forma exacta el estado del tablero del turno anterior. El jugador en <strong>Ko</strong> debe realizar una jugada en otra zona del tablero (una amenaza de Ko) antes de poder recapturar la piedra original en turnos posteriores.</p>
           </div>
           <div class="lang-en">
-            <p>To ensure rules-compliant matches, the ZenGoStudio engine validates every move based on traditional rules:</p>
-            <h3>A. Suicide Rule</h3>
-            <p>A player cannot place a stone on an intersection that has no remaining liberties (adjacent empty lines) unless that move captures one or more of the opponent's stones. If stones are captured, they are removed, giving liberties to the placed stone and making the move completely legal.</p>
-            <h3>B. Ko Rule</h3>
-            <p>To prevent infinite loops, recapturing a single stone is not allowed if it exactly recreates the board state of the previous turn. The player in Ko must play a move in another area of the board (a Ko threat) before being allowed to recapture.</p>
-            <h3>C. Scoring Methods</h3>
-            <ul>
-              <li><strong>Japanese Rules:</strong> Score is calculated by adding up surrounded empty territory and subtracting captured stones (prisoners).</li>
-              <li><strong>Chinese Rules:</strong> Score is calculated by area, summing both the player's live stones on the board and their surrounded empty intersections.</li>
-            </ul>
+            <p>To quickly start playing and understand ZenGoStudio's validation engine, these are the essential rules and capture mechanics:</p>
+            
+            <h3>A. Liberties</h3>
+            <p>Every stone placed on the board must have at least one adjacent empty intersection (horizontally or vertically). This empty point is called a <strong>liberty</strong>. When stones of the same color are adjacent, they connect to form a string and share all their liberties.</p>
+            
+            <h3>B. Atari</h3>
+            <p>When a stone or a string of connected stones is down to its last single liberty, it is said to be in <strong>Atari</strong>. This indicates that it is almost surrounded and will be captured if the opponent plays on that last liberty.</p>
+            
+            <h3>C. Capture & Suicide</h3>
+            <p>If you occupy all liberties of an opposing string, it is captured and removed from the board. The <strong>Suicide</strong> rule forbids placing a stone on a point with no liberties, unless that play captures opposing stones, which removes them and immediately restores liberties to the placed stone.</p>
+            
+            <h3>D. Ko Rule (No Repetition)</h3>
+            <p>To prevent endless capturing back and forth, a player cannot capture a single stone if it immediately repeats the exact board state of the previous turn. The player in <strong>Ko</strong> must play a move elsewhere on the board (a Ko threat) before being allowed to recapture in subsequent turns.</p>
           </div>
         </div>
 
