@@ -219,6 +219,238 @@
       </div>
     </section>
 
+    <!-- Gallery Section -->
+    <section class="screenshot-gallery-section" id="screenshots-section">
+      <div class="container">
+        <div class="gallery-header">
+          <h2>
+            <span class="lang-es">Capturas de Pantalla</span>
+            <span class="lang-en">App Screenshots</span>
+          </h2>
+          <p>
+            <span class="lang-es">Explora la interfaz moderna y las potentes características de ZenGoStudio en acción.</span>
+            <span class="lang-en">Explore the modern interface and powerful features of ZenGoStudio in action.</span>
+          </p>
+        </div>
+
+        <div class="carousel-wrapper">
+          <button class="carousel-nav-btn prev" onclick="moveSlide(-1)" aria-label="Previous Slide">&#10094;</button>
+          
+          <div class="carousel-viewport">
+            <div class="carousel-track" id="carousel-track">
+              
+              <!-- Slide 1: Setup Local -->
+              <div class="carousel-slide">
+                <img src="images/1.jpeg" alt="Local Game Setup" onclick="openLightbox(0)">
+                <div class="carousel-caption">
+                  <h3>
+                    <span class="lang-es">Configuración de Partida Local</span>
+                    <span class="lang-en">Local Game Configuration</span>
+                  </h3>
+                  <p>
+                    <span class="lang-es">Elige el tamaño del tablero (9x9, 13x13, 19x19), reglas japonesas o chinas, komi, hándicap y controles de tiempo profesionales.</span>
+                    <span class="lang-en">Choose board size (9x9, 13x13, 19x19), Japanese or Chinese rules, komi, handicap, and professional time controls.</span>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Slide 2: LAN Config -->
+              <div class="carousel-slide">
+                <img src="images/2.jpeg" alt="LAN Room Setup" onclick="openLightbox(1)">
+                <div class="carousel-caption">
+                  <h3>
+                    <span class="lang-es">Multijugador LAN / WebRTC</span>
+                    <span class="lang-en">LAN / WebRTC Multiplayer</span>
+                  </h3>
+                  <p>
+                    <span class="lang-es">Conéctate al instante con amigos en tu red local o mediante P2P WebRTC introduciendo un simple código de sala de 4 dígitos.</span>
+                    <span class="lang-en">Connect instantly with friends on your local network or via WebRTC P2P by entering a simple 4-digit room code.</span>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Slide 3: Immersive Goban -->
+              <div class="carousel-slide">
+                <img src="images/3.jpeg" alt="Immersive Goban View" onclick="openLightbox(2)">
+                <div class="carousel-caption">
+                  <h3>
+                    <span class="lang-es">Tablero Inmersivo (19x19)</span>
+                    <span class="lang-en">Immersive Goban View (19x19)</span>
+                  </h3>
+                  <p>
+                    <span class="lang-es">Juega en un tablero elegante con texturas de madera realistas y piedras con sombreados naturales en una interfaz libre de distracciones.</span>
+                    <span class="lang-en">Play on a beautiful board with realistic wooden textures and natural stone shadows in a distraction-free layout.</span>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Slide 4: AI Analysis -->
+              <div class="carousel-slide">
+                <img src="images/4.jpeg" alt="KataGo AI Analysis Chart" onclick="openLightbox(3)">
+                <div class="carousel-caption">
+                  <h3>
+                    <span class="lang-es">Gráfico y Análisis de IA</span>
+                    <span class="lang-en">AI Chart & Blunder Analysis</span>
+                  </h3>
+                  <p>
+                    <span class="lang-es">Examina la curva de porcentaje de victoria (Winrate) paso a paso e identifica tus errores (Blunders o Mistakes) evaluados por KataGo.</span>
+                    <span class="lang-en">Examine the winrate percentage curve step-by-step and identify your blunders or mistakes evaluated by KataGo.</span>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Slide 5: SGF Viewer -->
+              <div class="carousel-slide">
+                <img src="images/5.jpeg" alt="SGF Move Numbers" onclick="openLightbox(4)">
+                <div class="carousel-caption">
+                  <h3>
+                    <span class="lang-es">Visor y Editor de SGF</span>
+                    <span class="lang-en">SGF Viewer & Editor</span>
+                  </h3>
+                  <p>
+                    <span class="lang-es">Visualiza las jugadas con sus números correspondientes sobre el tablero y explora variaciones guardadas en archivos SGF locales.</span>
+                    <span class="lang-en">Display move numbers directly on the stones and explore game variations saved in local SGF files.</span>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Slide 6: Tablet View Heatmap -->
+              <div class="carousel-slide">
+                <img src="images/6.jpeg" alt="Tablet Landscape Heatmap" onclick="openLightbox(5)">
+                <div class="carousel-caption">
+                  <h3>
+                    <span class="lang-es">Modo Tablet y Mapa de Calor IA</span>
+                    <span class="lang-en">Tablet Mode & AI Heatmap</span>
+                  </h3>
+                  <p>
+                    <span class="lang-es">Disfruta de la vista horizontal en tablets con panel lateral completo, sugerencias de jugadas en tiempo real y estimación de puntos de KataGo.</span>
+                    <span class="lang-en">Enjoy tablet landscape view with a dedicated side panel, real-time move suggestions, and KataGo score estimation.</span>
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <button class="carousel-nav-btn next" onclick="moveSlide(1)" aria-label="Next Slide">&#10095;</button>
+        </div>
+
+        <div class="carousel-indicators" id="carousel-indicators">
+          <button class="indicator-dot active" onclick="currentSlide(0)" aria-label="Slide 1"></button>
+          <button class="indicator-dot" onclick="currentSlide(1)" aria-label="Slide 2"></button>
+          <button class="indicator-dot" onclick="currentSlide(2)" aria-label="Slide 3"></button>
+          <button class="indicator-dot" onclick="currentSlide(3)" aria-label="Slide 4"></button>
+          <button class="indicator-dot" onclick="currentSlide(4)" aria-label="Slide 5"></button>
+          <button class="indicator-dot" onclick="currentSlide(5)" aria-label="Slide 6"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" class="lightbox-modal">
+      <div class="lightbox-content">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <img id="lightbox-img" class="lightbox-img" src="" alt="Ampliada">
+        <div id="lightbox-caption" class="lightbox-caption"></div>
+      </div>
+    </div>
+
+    <!-- Beta / Testing Section -->
+    <section class="beta-testing-section" id="beta-section">
+      <div class="container">
+        <div class="beta-grid">
+          
+          <div class="beta-content">
+            <h2>
+              <span class="lang-es">¡Ayúdanos a Probar ZenGoStudio!</span>
+              <span class="lang-en">Help Us Test ZenGoStudio!</span>
+            </h2>
+            <p>
+              <span class="lang-es">Estamos compartiendo ZenGoStudio con la comunidad de <strong>OGS (Online Go Server)</strong>. Queremos que experimentes la app de primera mano y nos des tus valiosos comentarios sobre el rendimiento táctil, la integración de la IA y el multijugador.</span>
+              <span class="lang-en">We are sharing ZenGoStudio with the <strong>OGS (Online Go Server)</strong> community. We want you to experience the app first-hand and give us your valuable feedback on touch performance, AI integration, and multiplayer.</span>
+            </p>
+            <p>
+              <span class="lang-es">ZenGoStudio es offline-first: no necesitas crear una cuenta, no hay publicidad y todo el análisis de IA KataGo se ejecuta de forma local y privada en tu dispositivo.</span>
+              <span class="lang-en">ZenGoStudio is offline-first: no account registration needed, zero advertisements, and all KataGo AI analysis runs locally and privately on your device.</span>
+            </p>
+
+            <div class="beta-instructions">
+              <h3>
+                <span class="lang-es">¿Qué deberías probar?</span>
+                <span class="lang-en">What should you test?</span>
+              </h3>
+              <ul class="beta-step-list">
+                <li class="beta-step-item">
+                  <span class="beta-step-number">1</span>
+                  <strong>
+                    <span class="lang-es">Multijugador LAN / P2P:</span>
+                    <span class="lang-en">LAN / P2P Multiplayer:</span>
+                  </strong>
+                  <span class="lang-es"> Abre una partida local en red e invita a un amigo usando el PIN de 4 dígitos. ¡Dinos si la sincronización es instantánea!</span>
+                  <span class="lang-en"> Start a network game and invite a friend using the 4-digit PIN. Tell us if sync is instant!</span>
+                </li>
+                <li class="beta-step-item">
+                  <span class="beta-step-number">2</span>
+                  <strong>
+                    <span class="lang-es">Análisis IA Local:</span>
+                    <span class="lang-en">Local AI Analysis:</span>
+                  </strong>
+                  <span class="lang-es"> Activa KataGo para ver el mapa de calor de mejores jugadas y la estimación de territorio.</span>
+                  <span class="lang-en"> Enable KataGo to see the best moves heatmap and territory estimation.</span>
+                </li>
+                <li class="beta-step-item">
+                  <span class="beta-step-number">3</span>
+                  <strong>
+                    <span class="lang-es">Importador de SGF:</span>
+                    <span class="lang-en">SGF Importer:</span>
+                  </strong>
+                  <span class="lang-es"> Carga tus partidas de OGS (.sgf) y navega por el historial de jugadas o analiza las variantes críticas.</span>
+                  <span class="lang-en"> Load your OGS game files (.sgf) and review the moves history or analyze critical variations.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="beta-cards">
+            <!-- Card 1: Direct APK Download -->
+            <div class="beta-card">
+              <div class="beta-card-icon">🤖</div>
+              <h4>
+                <span class="lang-es">Descarga APK Directa</span>
+                <span class="lang-en">Direct APK Download</span>
+              </h4>
+              <p>
+                <span class="lang-es">Descarga e instala el archivo APK más reciente directamente en tu dispositivo Android.</span>
+                <span class="lang-en">Download and install the latest APK file directly on your Android device.</span>
+              </p>
+              <a href="zengostudio.apk" class="btn btn-primary beta-btn" download>
+                <span class="lang-es">Descargar APK</span>
+                <span class="lang-en">Download APK</span>
+              </a>
+            </div>
+
+            <!-- Card 2: Google Play Store -->
+            <div class="beta-card">
+              <div class="beta-card-icon">✨</div>
+              <h4>
+                <span class="lang-es">Google Play Store</span>
+                <span class="lang-en">Google Play Store</span>
+              </h4>
+              <p>
+                <span class="lang-es">Únete a la prueba beta oficial de Google Play Store para actualizaciones automáticas y seguras.</span>
+                <span class="lang-en">Join the official Google Play Store beta test for safe and automatic updates.</span>
+              </p>
+              <a href="market://details?id=com.zengo.app" class="btn btn-secondary beta-btn">
+                <span class="lang-es">Ver en Google Play</span>
+                <span class="lang-en">View on Google Play</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- Site Footer -->
@@ -255,6 +487,14 @@
         if (btnEn) btnEn.classList.remove('active');
         localStorage.setItem('cf_lang', 'es');
       }
+
+      // Update lightbox caption dynamically if open
+      if (activeLightboxIndex !== null) {
+        const caption = document.getElementById('lightbox-caption');
+        if (caption) {
+          caption.textContent = captionsData[lang][activeLightboxIndex];
+        }
+      }
     }
 
     // Initialize Language Preference
@@ -273,6 +513,99 @@
         stoneEl.classList.add('black');
       }
     }
+
+    // Carousel Logic
+    let currentSlideIndex = 0;
+    const totalSlides = 6;
+
+    function updateCarousel() {
+      const track = document.getElementById('carousel-track');
+      if (track) {
+        track.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+      }
+      
+      // Update dots
+      const dots = document.querySelectorAll('.indicator-dot');
+      dots.forEach((dot, index) => {
+        if (index === currentSlideIndex) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active');
+        }
+      });
+    }
+
+    function moveSlide(direction) {
+      currentSlideIndex = (currentSlideIndex + direction + totalSlides) % totalSlides;
+      updateCarousel();
+    }
+
+    function currentSlide(index) {
+      currentSlideIndex = index;
+      updateCarousel();
+    }
+
+    // Lightbox Logic
+    let activeLightboxIndex = null;
+    const captionsData = {
+      es: [
+        "Configuración de Partida Local — Elige tablero, reglas, komi y tiempo.",
+        "Multijugador LAN / WebRTC — Conéctate directo mediante PIN de 4 dígitos.",
+        "Tablero Inmersivo (19x19) — Interfaz libre de distracciones con realismo natural.",
+        "Gráfico y Análisis de IA — Identifica errores críticos y blunders con KataGo.",
+        "Visor de SGF — Sigue la secuencia paso a paso con numeración en las piedras.",
+        "Mapa de Calor de KataGo en Tablet — Vista horizontal con panel de control de IA."
+      ],
+      en: [
+        "Local Game Configuration — Choose board size, rules, komi, and time limits.",
+        "LAN / WebRTC Multiplayer — Connect directly using a simple 4-digit room code.",
+        "Immersive Goban View (19x19) — Distraction-free interface with realistic styling.",
+        "AI Chart & Blunder Analysis — Identify mistakes and critical moves via KataGo.",
+        "SGF Viewer — Step through moves with numbers overlayed on stones.",
+        "KataGo Heatmap on Tablet — Landscape layout with complete AI side controls."
+      ]
+    };
+
+    function openLightbox(index) {
+      const modal = document.getElementById('lightbox-modal');
+      const img = document.getElementById('lightbox-img');
+      const caption = document.getElementById('lightbox-caption');
+      
+      if (modal && img && caption) {
+        img.src = `images/${index + 1}.jpeg`;
+        
+        // Get active language
+        const isEn = document.documentElement.classList.contains('lang-en-active');
+        const lang = isEn ? 'en' : 'es';
+        
+        caption.textContent = captionsData[lang][index];
+        activeLightboxIndex = index;
+        modal.classList.add('active');
+      }
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightbox-modal');
+      if (modal) {
+        modal.classList.remove('active');
+        activeLightboxIndex = null;
+      }
+    }
+
+    // Close lightbox on clicking background
+    window.addEventListener('click', (event) => {
+      const modal = document.getElementById('lightbox-modal');
+      if (event.target === modal) {
+        closeLightbox();
+      }
+    });
+
+    // Close lightbox on pressing Escape key
+    window.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        closeLightbox();
+      }
+    });
   </script>
 </body>
 </html>
