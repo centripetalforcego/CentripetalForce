@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" class="lang-es-active">
+<html lang="en" class="lang-en-active">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,8 +53,8 @@
           <li><a href="privacy.html" class="nav-link" id="nav-privacy"><span class="lang-es">Privacidad</span><span class="lang-en">Privacy</span></a></li>
           <li>
             <div class="lang-switcher" id="header-lang-switcher">
-              <button class="lang-btn active" id="btn-lang-es" onclick="setLanguage('es')">ES</button>
-              <button class="lang-btn" id="btn-lang-en" onclick="setLanguage('en')">EN</button>
+              <button class="lang-btn" id="btn-lang-es" onclick="setLanguage('es')">ES</button>
+              <button class="lang-btn active" id="btn-lang-en" onclick="setLanguage('en')">EN</button>
             </div>
           </li>
         </ul>
@@ -68,19 +68,19 @@
     <!-- Studio Hero Section -->
     <section class="hero" id="hero-section">
       <div class="container">
-        <h2 class="hero-subtitle" id="hero-sub">CentripetalForce Studio</h2>
+        <h2 class="hero-subtitle" id="hero-sub">CentripetalForce</h2>
         <h1 class="hero-title" id="hero-main-title">
-          <span class="lang-es">Creamos Experiencias Digitales <span>Premium</span></span>
-          <span class="lang-en">Crafting <span>Premium</span> Digital Experiences</span>
+          <span class="lang-es">Desarrollo de Software y <span>Pasión por el Go</span></span>
+          <span class="lang-en">Software Development & <span>Passion for Go</span></span>
         </h1>
         <p class="hero-description" id="hero-desc">
-          <span class="lang-es">Desarrollamos aplicaciones y herramientas móviles enfocadas en un rendimiento local excepcional, un diseño visual elegante y la absoluta privacidad del usuario.</span>
-          <span class="lang-en">We develop mobile applications and software tools focused on exceptional native performance, elegant visual design, and absolute user privacy.</span>
+          <span class="lang-es">Hola, soy un desarrollador independiente y entusiasta del Go. He creado este espacio y la aplicación ZenGoStudio como un proyecto personal y de afición, enfocado en ofrecer una experiencia de juego local excepcional, un diseño elegante y absoluta privacidad.</span>
+          <span class="lang-en">Hello, I'm an independent developer and Go enthusiast. I created this space and ZenGoStudio as a personal hobby project, focused on offering an exceptional local playing experience, elegant design, and absolute privacy.</span>
         </p>
         <div class="cta-group" id="hero-cta">
           <a href="#apps-section" class="btn btn-primary" id="cta-explore">
-            <span class="lang-es">Ver Nuestras Aplicaciones</span>
-            <span class="lang-en">Explore Our Applications</span>
+            <span class="lang-es">Ver mi Aplicación</span>
+            <span class="lang-en">Explore My Application</span>
           </a>
         </div>
       </div>
@@ -92,12 +92,12 @@
         
         <div class="section-header" id="apps-header">
           <h2>
-            <span class="lang-es">Nuestras Aplicaciones</span>
-            <span class="lang-en">Our Applications</span>
+            <span class="lang-es">Mi Aplicación</span>
+            <span class="lang-en">My Application</span>
           </h2>
           <p>
-            <span class="lang-es">Proyectos destacados diseñados y publicados bajo la firma de CentripetalForce.</span>
-            <span class="lang-en">Featured projects designed and published under the CentripetalForce banner.</span>
+            <span class="lang-es">El proyecto principal que he desarrollado con dedicación y entusiasmo.</span>
+            <span class="lang-en">The main project I have developed with dedication and enthusiasm.</span>
           </p>
         </div>
 
@@ -507,7 +507,7 @@
 
     // Initialize Language Preference
     window.addEventListener('DOMContentLoaded', () => {
-      const savedLang = localStorage.getItem('cf_lang') || 'es';
+      const savedLang = localStorage.getItem('cf_lang') || 'en';
       setLanguage(savedLang);
     });
 

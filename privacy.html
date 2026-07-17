@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" class="lang-es-active">
+<html lang="en" class="lang-en-active">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,8 +28,8 @@
           <li><a href="privacy.html" class="nav-link active" id="nav-privacy"><span class="lang-es">Privacidad</span><span class="lang-en">Privacy</span></a></li>
           <li>
             <div class="lang-switcher" id="header-lang-switcher">
-              <button class="lang-btn active" id="btn-lang-es" onclick="setLanguage('es')">ES</button>
-              <button class="lang-btn" id="btn-lang-en" onclick="setLanguage('en')">EN</button>
+              <button class="lang-btn" id="btn-lang-es" onclick="setLanguage('es')">ES</button>
+              <button class="lang-btn active" id="btn-lang-en" onclick="setLanguage('en')">EN</button>
             </div>
           </li>
         </ul>
@@ -133,7 +133,7 @@
 
     // Initialize Language Preference
     window.addEventListener('DOMContentLoaded', () => {
-      const savedLang = localStorage.getItem('cf_lang') || 'es';
+      const savedLang = localStorage.getItem('cf_lang') || 'en';
       setLanguage(savedLang);
     });
   </script>
